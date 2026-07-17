@@ -63,8 +63,13 @@ export default function ProfileCard({ lang }: ProfileCardProps) {
                   </p>
                 </div>
                 
-                <div className="w-12 h-12 bg-white/5 rounded-xl border border-white/10 flex items-center justify-center text-cyan-400">
-                  <UserCheck className="w-6 h-6" />
+                <div className="w-14 h-14 rounded-xl overflow-hidden border border-white/10 shadow-lg flex-shrink-0 bg-slate-800">
+                  <img
+                    src="https://raw.githubusercontent.com/seohyun700/SeoHyun-Wang_portfolio/42b2b9eb4cb214a0048343a43555141f318eae66/%EC%99%95%EC%84%9C%ED%98%84%20%EC%A6%9D%EB%AA%85%EC%82%AC%EC%A7%84_23.12.20.jpg"
+                    alt={lang === "ko" ? profileData.nameKo : profileData.nameEn}
+                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
 

@@ -7,7 +7,7 @@ interface HeroProps {
 }
 
 export default function Hero({ lang }: HeroProps) {
-  const imageSrc = "/src/assets/images/biotech_hero_banner_1784271871588.jpg";
+  const imageSrc = "https://raw.githubusercontent.com/seohyun700/SeoHyun-Wang_portfolio/42b2b9eb4cb214a0048343a43555141f318eae66/%EC%99%95%EC%84%9C%ED%98%84%20%EC%A6%9D%EB%AA%85%EC%82%AC%EC%A7%84_23.12.20.jpg";
 
   const handleScrollToNext = () => {
     const nextSec = document.getElementById("profile");
@@ -136,24 +136,24 @@ export default function Hero({ lang }: HeroProps) {
               <div className="absolute -inset-1 rounded-2xl bg-linear-to-r from-cyan-500 to-indigo-600 opacity-20 blur-xl animate-pulse-slow"></div>
               
               {/* Main Visual Box */}
-              <div className="relative glass-panel rounded-2xl p-3 shadow-2xl border border-white/50 overflow-hidden group">
-                <div className="relative aspect-16/10 rounded-xl overflow-hidden bg-slate-900 shadow-inner">
+              <div className="relative glass-panel rounded-2xl p-3 shadow-2xl border border-white/50 overflow-hidden group max-w-sm mx-auto">
+                <div className="relative aspect-[3/4] rounded-xl overflow-hidden bg-slate-900 shadow-inner">
                   <img
                     src={imageSrc}
-                    alt="Biomedical Informatics and Digital Pipeline"
+                    alt="Seo Hyun Wang Profile"
                     referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 ease-out"
+                    className="w-full h-full object-cover opacity-95 group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
                   {/* Glassmorphic Overlay Bar */}
                   <div className="absolute bottom-3 left-3 right-3 glass-panel-dark px-4 py-2.5 rounded-lg flex items-center justify-between text-white border border-white/10 shadow-lg">
                     <div className="flex items-center space-x-2">
                       <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-ping"></span>
                       <span className="font-mono text-[10px] tracking-widest text-emerald-400 uppercase font-bold">
-                        ACTIVE PIPELINE
+                        {lang === "ko" ? "BD 인재" : "BIOTECH BD"}
                       </span>
                     </div>
                     <span className="font-mono text-[9px] text-slate-300">
-                      SYS: CONKUK-BIOMED_BD
+                      SEO HYUN WANG
                     </span>
                   </div>
                 </div>
