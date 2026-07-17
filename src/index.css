@@ -6,6 +6,12 @@
   --font-mono: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
   --font-serif: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
   
+  --text-xs: 0.9375rem;
+  --text-sm: 1.0625rem;
+  --text-base: 1.25rem;
+  --text-lg: 1.4375rem;
+  --text-xl: 1.625rem;
+  
   /* Custom anim keys and theme gradients */
   --animate-float: float 6s ease-in-out infinite;
   --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;

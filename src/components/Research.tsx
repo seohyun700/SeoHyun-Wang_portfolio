@@ -67,7 +67,7 @@ export default function Research({ lang }: ResearchProps) {
                   
                   {/* Category Pill and Period */}
                   <div className="flex justify-between items-center">
-                    <span className={`inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-[10px] font-bold border ${colorClass}`}>
+                    <span className={`inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-xs font-bold border ${colorClass}`}>
                       {icon}
                       <span>
                         {res.category === "research" ? (lang === "ko" ? "실험실 연구" : "Lab Research") : 
@@ -76,35 +76,35 @@ export default function Research({ lang }: ResearchProps) {
                       </span>
                     </span>
                     
-                    <span className="font-mono text-[9px] text-slate-400 font-bold">
+                    <span className="font-mono text-xs text-slate-400 font-bold">
                       {res.period}
                     </span>
                   </div>
 
                   {/* Title & Role */}
                   <div className="space-y-1">
-                    <h3 className="font-sans font-extrabold text-lg text-slate-900 leading-snug">
+                    <h3 className="font-sans font-extrabold text-xl text-slate-900 leading-snug">
                       {title}
                     </h3>
-                    <p className="font-sans text-xs text-indigo-600 font-semibold">
+                    <p className="font-sans text-sm text-indigo-600 font-semibold">
                       {role}
                     </p>
                   </div>
 
                   {/* Core Summary Paragraph */}
-                  <p className="font-sans text-xs text-slate-500 leading-relaxed">
+                  <p className="font-sans text-base text-slate-500 leading-relaxed">
                     {summary}
                   </p>
 
                   {/* Actionable points */}
                   <div className="space-y-3 pt-4 border-t border-slate-100">
-                    <h4 className="font-sans text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                    <h4 className="font-sans text-xs font-bold uppercase tracking-widest text-slate-400">
                       {lang === "ko" ? "핵심 공헌 및 결과" : "Key Contribution & Results"}
                     </h4>
                     
                     <ul className="space-y-2">
                       {achievements.map((ach, achIdx) => (
-                        <li key={achIdx} className="font-sans text-[11px] text-slate-600 leading-normal pl-3 relative">
+                        <li key={achIdx} className="font-sans text-base text-slate-600 leading-normal pl-3 relative">
                           <span className="absolute left-0 top-1.5 w-1 h-1 rounded-full bg-slate-400" />
                           <span>{ach}</span>
                         </li>
@@ -119,7 +119,7 @@ export default function Research({ lang }: ResearchProps) {
                   {res.tags.map((tag, tIdx) => (
                     <span
                       key={tIdx}
-                      className="px-2 py-0.5 bg-white border border-slate-150 rounded text-[9px] font-mono text-slate-500"
+                      className="px-2 py-0.5 bg-white border border-slate-150 rounded text-xs font-mono text-slate-500"
                     >
                       #{tag}
                     </span>

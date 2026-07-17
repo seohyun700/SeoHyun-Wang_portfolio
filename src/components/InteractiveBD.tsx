@@ -119,14 +119,14 @@ export default function InteractiveBD({ lang }: InteractiveBDProps) {
               <div className="space-y-1.5 border-b border-slate-800 pb-4">
                 <div className="flex items-center space-x-2 text-cyan-400">
                   <BrainCircuit className="w-5 h-5 animate-pulse-slow" />
-                  <span className="font-mono text-[9px] tracking-widest font-extrabold uppercase">
+                  <span className="font-mono text-xs tracking-widest font-extrabold uppercase">
                     INTERACTIVE RECRUITER Q&A
                   </span>
                 </div>
-                <h3 className="font-sans text-lg font-bold text-white">
+                <h3 className="font-sans text-xl font-bold text-white">
                   {lang === "ko" ? "왕서현 매칭 인터뷰" : "Wang's Candidate Interview"}
                 </h3>
-                <p className="font-sans text-[10px] text-slate-400 leading-normal">
+                <p className="font-sans text-sm text-slate-400 leading-normal">
                   {lang === "ko" 
                     ? "인사담당자가 자주 묻는 면접 질문을 클릭해 왕서현 지원자의 입체적이고 설득력 있는 실제 답변을 확인해 보세요."
                     : "Click any standard screening question below to fetch my direct, executive-ready answers."}
@@ -145,13 +145,13 @@ export default function InteractiveBD({ lang }: InteractiveBDProps) {
                       key={mIdx}
                       className={`flex ${isSeo ? "justify-start" : "justify-end"}`}
                     >
-                      <div className={`max-w-[85%] rounded-2xl p-3.5 text-xs leading-relaxed ${
+                      <div className={`max-w-[85%] rounded-2xl p-3.5 text-base leading-relaxed ${
                         isSeo 
-                          ? "bg-slate-800 text-slate-100 border border-slate-700/60 rounded-tl-none" 
-                          : "bg-indigo-600 text-white rounded-tr-none"
+                           ? "bg-slate-800 text-slate-100 border border-slate-700/60 rounded-tl-none" 
+                           : "bg-indigo-600 text-white rounded-tr-none"
                       }`}>
                         {/* Speaker tag */}
-                        <span className="font-mono text-[8px] font-extrabold block text-slate-400 mb-1 uppercase tracking-wider">
+                        <span className="font-mono text-xs font-extrabold block text-slate-400 mb-1 uppercase tracking-wider">
                           {isSeo ? (lang === "ko" ? "지원자 왕서현" : "WANG SEOHYUN") : (lang === "ko" ? "인사담당자" : "RECRUITER")}
                         </span>
                         <span>
@@ -175,22 +175,22 @@ export default function InteractiveBD({ lang }: InteractiveBDProps) {
 
               {/* FAQS clickable buttons list */}
               <div className="pt-4 border-t border-slate-800 space-y-2">
-                <span className="font-mono text-[8px] text-slate-400 font-extrabold uppercase tracking-widest block mb-1">
+                <span className="font-mono text-xs text-slate-400 font-extrabold uppercase tracking-widest block mb-1">
                   CHOOSE QUESTION:
                 </span>
-                <div className="flex flex-col gap-1.5 max-h-[140px] overflow-y-auto">
+                <div className="flex flex-col gap-2 max-h-[160px] overflow-y-auto">
                   {recruiterFaqs.map((faq, idx) => (
                     <button
                       key={idx}
                       onClick={() => handleAskFaq(faq)}
                       id={`faq-btn-${idx}`}
                       disabled={isTyping}
-                      className="text-left px-3 py-2 bg-slate-800/60 hover:bg-slate-800 text-slate-300 hover:text-white rounded-lg text-[10px] font-semibold transition-colors duration-150 border border-slate-800/80 hover:border-slate-700 flex items-center justify-between disabled:opacity-50 disabled:pointer-events-none cursor-pointer"
+                      className="text-left px-4 py-3 bg-slate-800/60 hover:bg-slate-800 text-slate-300 hover:text-white rounded-xl text-base font-semibold transition-colors duration-150 border border-slate-800/80 hover:border-slate-700 flex items-center justify-between disabled:opacity-50 disabled:pointer-events-none cursor-pointer"
                     >
                       <span className="truncate pr-2">
                         {lang === "ko" ? faq.qKo : faq.qEn}
                       </span>
-                      <ChevronRight className="w-3.5 h-3.5 text-slate-500 shrink-0" />
+                      <ChevronRight className="w-4 h-4 text-slate-500 shrink-0" />
                     </button>
                   ))}
                 </div>

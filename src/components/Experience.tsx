@@ -79,14 +79,14 @@ export default function Experience({ lang }: ExperienceProps) {
                         )}
                       </div>
                       
-                      <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-500 font-medium">
+                      <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm sm:text-base text-slate-500 font-medium">
                         <span className="text-slate-800 font-bold">{roleName}</span>
                         <div className="flex items-center space-x-1">
-                          <Calendar className="w-3.5 h-3.5 text-slate-400" />
+                          <Calendar className="w-4 h-4 text-slate-400" />
                           <span>{exp.period}</span>
                         </div>
                         <div className="flex items-center space-x-1">
-                          <MapPin className="w-3.5 h-3.5 text-slate-400" />
+                          <MapPin className="w-4 h-4 text-slate-400" />
                           <span>{lang === "ko" ? "서울" : "Seoul, KR"}</span>
                         </div>
                       </div>
@@ -120,17 +120,17 @@ export default function Experience({ lang }: ExperienceProps) {
                     
                     {/* Brief Highlights Summary */}
                     <div className="py-5 space-y-2">
-                      <h4 className="font-sans text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center space-x-1.5">
-                        <Star className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
+                      <h4 className="font-sans text-sm font-bold uppercase tracking-wider text-slate-400 flex items-center space-x-1.5">
+                        <Star className="w-4 h-4 text-amber-500 fill-amber-500" />
                         <span>{lang === "ko" ? "주요 성과 요약" : "Key Strengths & Deliverables"}</span>
                       </h4>
                       <ul className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         {highlights.map((hl, hlIdx) => (
                           <li key={hlIdx} className="p-4 bg-white rounded-xl border border-slate-100 shadow-xs flex items-start space-x-2.5">
-                            <span className="w-5 h-5 bg-indigo-50/80 text-indigo-600 font-mono text-xs font-bold rounded-lg flex items-center justify-center shrink-0">
+                            <span className="w-6 h-6 bg-indigo-50/80 text-indigo-600 font-mono text-sm font-bold rounded-lg flex items-center justify-center shrink-0">
                               {hlIdx + 1}
                             </span>
-                            <span className="font-sans text-[11px] font-semibold text-slate-700 leading-normal">
+                            <span className="font-sans text-base font-semibold text-slate-700 leading-normal">
                               {hl}
                             </span>
                           </li>
@@ -140,21 +140,21 @@ export default function Experience({ lang }: ExperienceProps) {
 
                     {/* Detailed Duties Breakdown */}
                     <div className="pt-4 border-t border-slate-100 space-y-6">
-                      <h4 className="font-sans text-xs font-bold uppercase tracking-wider text-slate-400">
+                      <h4 className="font-sans text-sm font-bold uppercase tracking-wider text-slate-400">
                         {lang === "ko" ? "상세 업무 내역" : "Detailed Functional Breakdown"}
                       </h4>
 
                       <div className="space-y-6">
                         {details.map((detail, dIdx) => (
                           <div key={dIdx} className="space-y-2.5">
-                            <h5 className="font-sans text-xs font-bold text-slate-900 flex items-center space-x-2">
+                            <h5 className="font-sans text-base font-bold text-slate-900 flex items-center space-x-2">
                               <span className="w-1.5 h-1.5 rounded-full bg-indigo-500" />
                               <span>{detail.title}</span>
                             </h5>
                             
                             <ul className="space-y-2 pl-4 border-l border-slate-200">
                               {detail.items.map((item, itemIdx) => (
-                                <li key={itemIdx} className="font-sans text-xs text-slate-600 leading-relaxed">
+                                <li key={itemIdx} className="font-sans text-base text-slate-600 leading-relaxed">
                                   {item}
                                 </li>
                               ))}
@@ -166,12 +166,12 @@ export default function Experience({ lang }: ExperienceProps) {
 
                     {/* Full Tech / Skill list for this company */}
                     <div className="mt-8 pt-5 border-t border-slate-100">
-                      <h4 className="font-sans text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2.5">
+                      <h4 className="font-sans text-xs font-bold uppercase tracking-widest text-slate-400 mb-2.5">
                         {lang === "ko" ? "적용 역량 및 키워드" : "Demonstrated Capabilities"}
                       </h4>
                       <div className="flex flex-wrap gap-1.5">
                         {exp.techStack.map((tech, tIdx) => (
-                          <span key={tIdx} className="px-3 py-1 bg-white border border-slate-100 text-slate-700 text-[10px] font-mono font-medium rounded-full shadow-xs">
+                          <span key={tIdx} className="px-3 py-1 bg-white border border-slate-100 text-slate-700 text-xs font-mono font-medium rounded-full shadow-xs">
                             {tech}
                           </span>
                         ))}
